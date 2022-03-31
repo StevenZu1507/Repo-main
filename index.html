@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBudget</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<main>
+ <h1> DO YOU WANT TO GO ON VACATION, BUT YOU'RE NOT SURE HOW MUCH MONEY YOU'LL HAVE LEFT AFTER PAYING ALL YOUR BILLS? </h1>
+ 
+</main>
+
+<p>
+.
+
+</p>
+ <h2> .     .      .      .LET'S FIND OUT!!!--------------------------------></h2>
+
+<mainTwo>
+
+    <div class="budget-container" > 
+    
+
+     <div class="app-title"> 
+       <h2>PLAN YOUR VACATION WITHIN YOUR BUDGET!!! </h2>
+     </div>
+
+
+
+       <!--<table class="center">-->
+        
+        
+        <button onclick="reset" style="background-color:red" name="reset" type="reset" value="Reset" id="reset">
+            Reset
+        </button>
+     
+    <script>src="script.js"</script>
+        
+        <table id="example" class="display" style="center">
+            <thead>
+                <tr>
+                    <th>INCOME</th>
+                    <th>DATE</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                
+                    <td>
+                         $ <input id = "income" type="text" name="row-1-age" value="">
+                    </td>
+
+                    <td>
+                        <input type="text" id="row-1-position" name="row-1-position" value="">
+                    </td>
+            </tbody>
+        
+                
+                <div>
+
+
+                    <table 
+                        class="center">
+
+                    </table>
+                     <br>
+
+                        <!--This is just Space-->
+
+                    </br> 
+                        <input type="button" value="Add Expense" onclick="alert ('Seriously?? Theres no need of more bills... CARRY ON!') " >
+                        
+    
+                    <table id="table" class="display" style="center">
+                            <thead>
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>COST</th>
+                                    <th>DATE</th>
+                        
+                                </tr>
+                            </thead>
+                        <tbody>
+            
+                         <tr>
+                
+                            <td>
+                                <input type="text" value="Housing or Rent">
+                            </td>
+
+                        <td>$<input type="text"
+                         value=""></td>
+
+                        <td> <input type="text" 
+                        value=""></td>
+
+
+                         <tr>
+                
+                 <td> <input type="text" 
+                   value="Car Payment"></td>
+    
+                 <td>$<input type="text"
+                     value=""></td>
+    
+                 <td> <input type="text" 
+                     value=""></td>
+
+
+            <tr>
+                
+                <td> <input type="text" 
+               value="Car Insurance"></td>
+
+                <td>$<input type="text"
+                 value=""></td>
+
+                <td> <input type="text" 
+                 value=""></td>
+
+
+
+             <tr>
+                
+                 <td> <input type="text" 
+                   value="Groceries"></td>
+    
+                  <td>$<input type="text"
+                     value=""></td>
+    
+                 <td> <input type="text" 
+                     value=""></td>
+
+
+             <tr>
+                
+                  <td> <input type="text" 
+                       value="Utility Bills"></td>
+        
+                 <td>$<input type="text"
+                         value=""></td>
+        
+                    <td> <input type="text" 
+                         value=""></td>
+
+             <tr>
+                
+                <td> <input type="text" 
+                           value="Cell Phone"></td>
+            
+                 <td>$<input type="text"
+                             value=""></td>
+            
+                  <td> <input type="text" 
+                             value=""></td>
+
+            <tr>
+                
+                <td> <input type="text" 
+               value="Child Care"></td>
+
+                <td>$<input type="text"
+                 value=""></td>
+
+                <td> <input type="text" 
+                 value=""></td>
+
+
+            <tr>
+                
+                  <td> <input type="text" 
+                   value="Health Insurance"></td>
+    
+                 <td>$<input type="text"
+                     value=""></td>
+    
+                  <td> <input type="text" 
+                     value=""></td>
+
+
+          <tr>
+                
+                  <td> <input type="text" 
+                       value="Subscriptions"></td>
+        
+                 <td>$<input type="text"
+                         value=""></td>
+        
+                  <td> <input type="text" 
+                         value=""></td>
+
+            <tr>
+                
+                  <td> <input type="text" 
+                           value="Credit Card Debt"></td>
+            
+                   <td>$<input type="text"
+                             value=""></td>
+            
+                   <td> <input type="text" 
+                             value=""></td>
+
+
+          <span id="val"></span>
+
+                                
+
+
+
+</div>
+
+
+<div>
+    
+ <thead>
+
+
+    <tr> 
+        <th>
+            <br>
+
+            <!--This is just Space-->
+            
+            </br>  
+            <br>
+
+            <!--This is just Space-->
+            
+            </br>  
+            <br>
+
+            <!--This is just Space-->
+            
+            </br>   
+            
+            BALANCE: <button style="background-color: #33FF46"     onclick="calculate()" type="submit">
+                
+                Calculate
+            
+            </button>
+         </th>
+       
+      
+        
+    </tr>
+         
+
+         
+    <tr>
+        
+        <td>$  <input type="text" id="balance"
+        name="" value=""></td>
+    </tr>
+        
+ </div>
+ 
+ <script>
+    var income = document.getElementById("income")
+     var table = document.getElementById("table"); 
+     var balance = document.getElementById("balance")
+     var sumVal = 0;
+     console.log(table);
+    var reset = document.getElementById("reset")
+function calculate(){
+
+for(var i = 3; i < table.rows.length; i++)
+    {
+        console.log(table.rows[i].cells[1].lastChild.value)
+
+        sumVal = sumVal + parseInt(table.rows[i].cells[1].lastChild.value);
+    }
+    
+    // document.getElementById("val").innerHTML = "Balance = " + sumVal;
+    console.log(sumVal);
+    balance.value = income.value - sumVal
+    
+}
+</script>
+
+</html>
